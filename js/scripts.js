@@ -33,5 +33,29 @@ Pizza.prototype.priceCalc = function() {
 }
 
 
+$(document).ready(function() {
+    $("form#order-pizza").submit(function() {
+        var quantity = $("input#amount").val();
+        var pizzaSize = $("option:selected").val();
+        var toppings = [];
+        $("input.toppings:checked").each(function() {
+          var topping = $(this).val();
+          $("#receipt-toppings").append("<li class='list-topping'>" + topping + "</li>");
+          toppings.push(topping);
+        });
+        newPizza = new Pizza(quantity, pizzaSize, toppings);
+        $("#receipt-size").text(pizzaSize);
+        $("#receipt-quantity").text(quantity);
+        $("#receipt-price").text("$" + newPizza.priceCalc());
+        $(".main").hide();
+        $(".receipt-display").fadeIn();
 
+        event.preventDefault();
+    });
+
+    $("#new-order").click(function() {
+        $(".list-topping").remove();
+        $(".receipt-display").hide();
+        $(".main").fadeIn();
+    });
 });
