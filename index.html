@@ -5,13 +5,51 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Alert</title>
+  <title>Order a pizza</title>
 </head>
 
 <body>
 
+  <div class="container">
+      <h1>Start building your amazing pizza here!</h1>
+      <div class"row" id="ingredients">
+        <div class="col-sm-6 verticalbar">
+          <form id="allSizes">
+            <h2>My Pizza:</h2>
+            <div class="new-pizza">
+              <label for="pizzaSize">Select the size of your pizza:</label>
+              <select class="form-control" id="pizzaSize">
+                <option value="8">Mini (8")</option>
+                <option value="10">Small (10")</option>
+                <option value="12">Medium (12")</option>
+                <option value="14">Large (14")</option>
+              </select>
 
-    <button type="button" id="btn1">ai dat click</button>
+              <div class="form-group">
+                  <div class="row">
+                    <p><strong>Please select toppings to make your pizza, well, Your pizza:</strong></p>
+                    <div class="col-xs-5">
+                      <input type="checkbox" name="availible-toppings" value="Cheese">Cheese ($1)<br>
+                      <input type="checkbox" name="availible-toppings" value="Olives">Olives  ($0.50)<br>
+                      <input type="checkbox" name="availible-toppings" value="Canadian Bacon">Canadian Bacon  ($1.50)<br>
+                      <input type="checkbox" name="availible-toppings" value="Pepperoni">Pepperoni  ($1)<br>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="addedPizzas">
+            </div>
+            <button type="submit" class="btn btn-primary">Order Now!</button>
+          </form>
+          <div id="finalPizzaDiv">
+            <h2>Your selection :</h2>
+            <ul id="finalPizzaDisplay">
+            </ul>
+            <p class="finalcost">Final Cost Here</p>
+        </div>
+
 
 </body>
 </html>
