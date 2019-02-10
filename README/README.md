@@ -11,7 +11,7 @@ _This is a program that allows you to order a pizza, selecting size, adding topp
 * Navigate to "Order-Pizza" directory
 * Open in Atom or any other text editor
 
-##Specifications
+## Specifications
 
 * Program will ask the user to select a size for the pizza. You cans elect from a drop down: Small, Medium, Large and Extra Large
 * Program will ask the user to select the number of pizzas
